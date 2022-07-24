@@ -1,0 +1,13 @@
+<idea-plugin package="com.intellij.httpClient.injection">
+  <dependencies>
+    <plugin id="org.intellij.intelliLang"/>
+  </dependencies>
+
+  <extensionPoints>
+    <extensionPoint qualifiedName="com.intellij.httpClient.injection.request.implicitMimeTypeProvider"
+                    interface="com.intellij.httpClient.injection.http.request.ImplicitMimeTypeProvider" dynamic="true"/>
+  </extensionPoints>
+  <extensions defaultExtensionNs="com.intellij">
+    <multiHostInjector implementation="com.intellij.httpClient.injection.http.request.HttpRequestBodyInjector"/>
+  </extensions>
+</idea-plugin>
