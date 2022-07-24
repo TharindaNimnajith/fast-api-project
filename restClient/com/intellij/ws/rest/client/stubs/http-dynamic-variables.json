@@ -1,5 +1,5 @@
 {
-  "__about__" : [
+  "__about__": [
     "This file provides stubs for dynamic variables used in HTTP Client",
     "This file serves a documentation purpose and should not be modified manually",
     "Values of this variables are generated at the runtime"

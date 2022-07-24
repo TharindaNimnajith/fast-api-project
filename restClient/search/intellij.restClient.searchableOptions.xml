@@ -1,159 +1,159 @@
 <options>
-  <configurable id="preferences.keymap" configurable_name="Keymap">
-    <option name="" path="ActionManager" hit="" />
-    <option name="add" path="ActionManager" hit="Add Request" />
-    <option name="request" path="ActionManager" hit="Add Request" />
-    <option name="client" path="ActionManager" hit="Convert Legacy REST Client File to New Format" />
-    <option name="convert" path="ActionManager" hit="Convert Legacy REST Client File to New Format" />
-    <option name="file" path="ActionManager" hit="Convert Legacy REST Client File to New Format" />
-    <option name="format" path="ActionManager" hit="Convert Legacy REST Client File to New Format" />
-    <option name="legacy" path="ActionManager" hit="Convert Legacy REST Client File to New Format" />
-    <option name="new" path="ActionManager" hit="Convert Legacy REST Client File to New Format" />
-    <option name="rest" path="ActionManager" hit="Convert Legacy REST Client File to New Format" />
-    <option name="to" path="ActionManager" hit="Convert Legacy REST Client File to New Format" />
-    <option name="client" path="ActionManager" hit="Convert Legacy REST Client Files to HTTP Requests" />
-    <option name="convert" path="ActionManager" hit="Convert Legacy REST Client Files to HTTP Requests" />
-    <option name="files" path="ActionManager" hit="Convert Legacy REST Client Files to HTTP Requests" />
-    <option name="http" path="ActionManager" hit="Convert Legacy REST Client Files to HTTP Requests" />
-    <option name="legacy" path="ActionManager" hit="Convert Legacy REST Client Files to HTTP Requests" />
-    <option name="requests" path="ActionManager" hit="Convert Legacy REST Client Files to HTTP Requests" />
-    <option name="rest" path="ActionManager" hit="Convert Legacy REST Client Files to HTTP Requests" />
-    <option name="to" path="ActionManager" hit="Convert Legacy REST Client Files to HTTP Requests" />
-    <option name="convert" path="ActionManager" hit="Convert cURL to HTTP Request" />
-    <option name="curl" path="ActionManager" hit="Convert cURL to HTTP Request" />
-    <option name="http" path="ActionManager" hit="Convert cURL to HTTP Request" />
-    <option name="request" path="ActionManager" hit="Convert cURL to HTTP Request" />
-    <option name="to" path="ActionManager" hit="Convert cURL to HTTP Request" />
-    <option name="and" path="ActionManager" hit="Convert to cURL and Copy" />
-    <option name="convert" path="ActionManager" hit="Convert to cURL and Copy" />
-    <option name="copy" path="ActionManager" hit="Convert to cURL and Copy" />
-    <option name="curl" path="ActionManager" hit="Convert to cURL and Copy" />
-    <option name="to" path="ActionManager" hit="Convert to cURL and Copy" />
-    <option name="body" path="ActionManager" hit="Copy Response Body to Clipboard" />
-    <option name="clipboard" path="ActionManager" hit="Copy Response Body to Clipboard" />
-    <option name="copy" path="ActionManager" hit="Copy Response Body to Clipboard" />
-    <option name="response" path="ActionManager" hit="Copy Response Body to Clipboard" />
-    <option name="to" path="ActionManager" hit="Copy Response Body to Clipboard" />
-    <option name="client" path="ActionManager" hit="Create Request in HTTP Client" />
-    <option name="create" path="ActionManager" hit="Create Request in HTTP Client" />
-    <option name="http" path="ActionManager" hit="Create Request in HTTP Client" />
-    <option name="in" path="ActionManager" hit="Create Request in HTTP Client" />
-    <option name="request" path="ActionManager" hit="Create Request in HTTP Client" />
-    <option name="create" path="ActionManager" hit="Create environment file for HTTP requests" />
-    <option name="environment" path="ActionManager" hit="Create environment file for HTTP requests" />
-    <option name="file" path="ActionManager" hit="Create environment file for HTTP requests" />
-    <option name="for" path="ActionManager" hit="Create environment file for HTTP requests" />
-    <option name="http" path="ActionManager" hit="Create environment file for HTTP requests" />
-    <option name="requests" path="ActionManager" hit="Create environment file for HTTP requests" />
-    <option name="create" path="ActionManager" hit="Create private HTTP environment file for HTTP requests" />
-    <option name="environment" path="ActionManager" hit="Create private HTTP environment file for HTTP requests" />
-    <option name="file" path="ActionManager" hit="Create private HTTP environment file for HTTP requests" />
-    <option name="for" path="ActionManager" hit="Create private HTTP environment file for HTTP requests" />
-    <option name="http" path="ActionManager" hit="Create private HTTP environment file for HTTP requests" />
-    <option name="private" path="ActionManager" hit="Create private HTTP environment file for HTTP requests" />
-    <option name="requests" path="ActionManager" hit="Create private HTTP environment file for HTTP requests" />
-    <option name="creates" path="ActionManager" hit="Creates new HTTP Request file" />
-    <option name="file" path="ActionManager" hit="Creates new HTTP Request file" />
-    <option name="http" path="ActionManager" hit="Creates new HTTP Request file" />
-    <option name="new" path="ActionManager" hit="Creates new HTTP Request file" />
-    <option name="request" path="ActionManager" hit="Creates new HTTP Request file" />
-    <option name="client" path="ActionManager" hit="Generate Request in HTTP Client" />
-    <option name="generate" path="ActionManager" hit="Generate Request in HTTP Client" />
-    <option name="http" path="ActionManager" hit="Generate Request in HTTP Client" />
-    <option name="in" path="ActionManager" hit="Generate Request in HTTP Client" />
-    <option name="request" path="ActionManager" hit="Generate Request in HTTP Client" />
-    <option name="client" path="ActionManager" hit="HTTP Client" />
-    <option name="http" path="ActionManager" hit="HTTP Client" />
-    <option name="environment" path="ActionManager" hit="HTTP Environment File" />
-    <option name="file" path="ActionManager" hit="HTTP Environment File" />
-    <option name="http" path="ActionManager" hit="HTTP Environment File" />
-    <option name="http" path="ActionManager" hit="HTTP Request" />
-    <option name="request" path="ActionManager" hit="HTTP Request" />
-    <option name="http" path="ActionManager" hit="Import HTTP Request" />
-    <option name="import" path="ActionManager" hit="Import HTTP Request" />
-    <option name="request" path="ActionManager" hit="Import HTTP Request" />
-    <option name="collection" path="ActionManager" hit="Open HTTP Requests Collection" />
-    <option name="http" path="ActionManager" hit="Open HTTP Requests Collection" />
-    <option name="open" path="ActionManager" hit="Open HTTP Requests Collection" />
-    <option name="requests" path="ActionManager" hit="Open HTTP Requests Collection" />
-    <option name="build" path="ActionManager" hit="Opens build-in collection of HTTP Requests" />
-    <option name="collection" path="ActionManager" hit="Opens build-in collection of HTTP Requests" />
-    <option name="http" path="ActionManager" hit="Opens build-in collection of HTTP Requests" />
-    <option name="in" path="ActionManager" hit="Opens build-in collection of HTTP Requests" />
-    <option name="of" path="ActionManager" hit="Opens build-in collection of HTTP Requests" />
-    <option name="opens" path="ActionManager" hit="Opens build-in collection of HTTP Requests" />
-    <option name="requests" path="ActionManager" hit="Opens build-in collection of HTTP Requests" />
-    <option name="executed" path="ActionManager" hit="Opens log file with executed HTTP Requests" />
-    <option name="file" path="ActionManager" hit="Opens log file with executed HTTP Requests" />
-    <option name="http" path="ActionManager" hit="Opens log file with executed HTTP Requests" />
-    <option name="log" path="ActionManager" hit="Opens log file with executed HTTP Requests" />
-    <option name="opens" path="ActionManager" hit="Opens log file with executed HTTP Requests" />
-    <option name="requests" path="ActionManager" hit="Opens log file with executed HTTP Requests" />
-    <option name="with" path="ActionManager" hit="Opens log file with executed HTTP Requests" />
-    <option name="all" path="ActionManager" hit="Run All Requests in File" />
-    <option name="file" path="ActionManager" hit="Run All Requests in File" />
-    <option name="in" path="ActionManager" hit="Run All Requests in File" />
-    <option name="requests" path="ActionManager" hit="Run All Requests in File" />
-    <option name="run" path="ActionManager" hit="Run All Requests in File" />
-    <option name="history" path="ActionManager" hit="Show HTTP Requests History" />
-    <option name="http" path="ActionManager" hit="Show HTTP Requests History" />
-    <option name="requests" path="ActionManager" hit="Show HTTP Requests History" />
-    <option name="show" path="ActionManager" hit="Show HTTP Requests History" />
-    <option name="client" path="ActionManager" hit="http-client.env.json" />
-    <option name="env" path="ActionManager" hit="http-client.env.json" />
-    <option name="http" path="ActionManager" hit="http-client.env.json" />
-    <option name="json" path="ActionManager" hit="http-client.env.json" />
-    <option name="client" path="ActionManager" hit="http-client.private.env.json" />
-    <option name="env" path="ActionManager" hit="http-client.private.env.json" />
-    <option name="http" path="ActionManager" hit="http-client.private.env.json" />
-    <option name="json" path="ActionManager" hit="http-client.private.env.json" />
-    <option name="private" path="ActionManager" hit="http-client.private.env.json" />
-  </configurable>
-  <configurable id="reference.settingsdialog.IDE.editor.colors.HTTP Request" configurable_name="HTTP Request">
-    <option name="http" hit="HTTP Request" />
-    <option name="request" hit="HTTP Request" />
-    <option name="comment" hit="Comment" />
-    <option name="comment" hit="Comment tag" />
-    <option name="tag" hit="Comment tag" />
-    <option name="environment" hit="Environment Variable" />
-    <option name="variable" hit="Environment Variable" />
-    <option name="field" hit="Header Field Key" />
-    <option name="header" hit="Header Field Key" />
-    <option name="key" hit="Header Field Key" />
-    <option name="field" hit="Header Field Value" />
-    <option name="header" hit="Header Field Value" />
-    <option name="value" hit="Header Field Value" />
-    <option name="file" hit="Input File Path" />
-    <option name="input" hit="Input File Path" />
-    <option name="path" hit="Input File Path" />
-    <option name="file" hit="Input File Sign" />
-    <option name="input" hit="Input File Sign" />
-    <option name="sign" hit="Input File Sign" />
-    <option name="method" hit="Method Type" />
-    <option name="type" hit="Method Type" />
-    <option name="boundary" hit="Multipart Boundary" />
-    <option name="multipart" hit="Multipart Boundary" />
-    <option name="body" hit="Request Body" />
-    <option name="request" hit="Request Body" />
-    <option name="name" hit="Request Name" />
-    <option name="request" hit="Request Name" />
-    <option name="name" hit="Request Parameter Name" />
-    <option name="parameter" hit="Request Parameter Name" />
-    <option name="request" hit="Request Parameter Name" />
-    <option name="parameter" hit="Request Parameter Value" />
-    <option name="request" hit="Request Parameter Value" />
-    <option name="value" hit="Request Parameter Value" />
-    <option name="port" hit="Request Port" />
-    <option name="request" hit="Request Port" />
-    <option name="requests" hit="Requests Separator" />
-    <option name="separator" hit="Requests Separator" />
-    <option name="history" hit="Response History Path" />
-    <option name="path" hit="Response History Path" />
-    <option name="response" hit="Response History Path" />
-    <option name="history" hit="Response History Sign" />
-    <option name="response" hit="Response History Sign" />
-    <option name="sign" hit="Response History Sign" />
-    <option name="braces" hit="Variable Braces" />
-    <option name="variable" hit="Variable Braces" />
-  </configurable>
+    <configurable id="preferences.keymap" configurable_name="Keymap">
+        <option name="" path="ActionManager" hit=""/>
+        <option name="add" path="ActionManager" hit="Add Request"/>
+        <option name="request" path="ActionManager" hit="Add Request"/>
+        <option name="client" path="ActionManager" hit="Convert Legacy REST Client File to New Format"/>
+        <option name="convert" path="ActionManager" hit="Convert Legacy REST Client File to New Format"/>
+        <option name="file" path="ActionManager" hit="Convert Legacy REST Client File to New Format"/>
+        <option name="format" path="ActionManager" hit="Convert Legacy REST Client File to New Format"/>
+        <option name="legacy" path="ActionManager" hit="Convert Legacy REST Client File to New Format"/>
+        <option name="new" path="ActionManager" hit="Convert Legacy REST Client File to New Format"/>
+        <option name="rest" path="ActionManager" hit="Convert Legacy REST Client File to New Format"/>
+        <option name="to" path="ActionManager" hit="Convert Legacy REST Client File to New Format"/>
+        <option name="client" path="ActionManager" hit="Convert Legacy REST Client Files to HTTP Requests"/>
+        <option name="convert" path="ActionManager" hit="Convert Legacy REST Client Files to HTTP Requests"/>
+        <option name="files" path="ActionManager" hit="Convert Legacy REST Client Files to HTTP Requests"/>
+        <option name="http" path="ActionManager" hit="Convert Legacy REST Client Files to HTTP Requests"/>
+        <option name="legacy" path="ActionManager" hit="Convert Legacy REST Client Files to HTTP Requests"/>
+        <option name="requests" path="ActionManager" hit="Convert Legacy REST Client Files to HTTP Requests"/>
+        <option name="rest" path="ActionManager" hit="Convert Legacy REST Client Files to HTTP Requests"/>
+        <option name="to" path="ActionManager" hit="Convert Legacy REST Client Files to HTTP Requests"/>
+        <option name="convert" path="ActionManager" hit="Convert cURL to HTTP Request"/>
+        <option name="curl" path="ActionManager" hit="Convert cURL to HTTP Request"/>
+        <option name="http" path="ActionManager" hit="Convert cURL to HTTP Request"/>
+        <option name="request" path="ActionManager" hit="Convert cURL to HTTP Request"/>
+        <option name="to" path="ActionManager" hit="Convert cURL to HTTP Request"/>
+        <option name="and" path="ActionManager" hit="Convert to cURL and Copy"/>
+        <option name="convert" path="ActionManager" hit="Convert to cURL and Copy"/>
+        <option name="copy" path="ActionManager" hit="Convert to cURL and Copy"/>
+        <option name="curl" path="ActionManager" hit="Convert to cURL and Copy"/>
+        <option name="to" path="ActionManager" hit="Convert to cURL and Copy"/>
+        <option name="body" path="ActionManager" hit="Copy Response Body to Clipboard"/>
+        <option name="clipboard" path="ActionManager" hit="Copy Response Body to Clipboard"/>
+        <option name="copy" path="ActionManager" hit="Copy Response Body to Clipboard"/>
+        <option name="response" path="ActionManager" hit="Copy Response Body to Clipboard"/>
+        <option name="to" path="ActionManager" hit="Copy Response Body to Clipboard"/>
+        <option name="client" path="ActionManager" hit="Create Request in HTTP Client"/>
+        <option name="create" path="ActionManager" hit="Create Request in HTTP Client"/>
+        <option name="http" path="ActionManager" hit="Create Request in HTTP Client"/>
+        <option name="in" path="ActionManager" hit="Create Request in HTTP Client"/>
+        <option name="request" path="ActionManager" hit="Create Request in HTTP Client"/>
+        <option name="create" path="ActionManager" hit="Create environment file for HTTP requests"/>
+        <option name="environment" path="ActionManager" hit="Create environment file for HTTP requests"/>
+        <option name="file" path="ActionManager" hit="Create environment file for HTTP requests"/>
+        <option name="for" path="ActionManager" hit="Create environment file for HTTP requests"/>
+        <option name="http" path="ActionManager" hit="Create environment file for HTTP requests"/>
+        <option name="requests" path="ActionManager" hit="Create environment file for HTTP requests"/>
+        <option name="create" path="ActionManager" hit="Create private HTTP environment file for HTTP requests"/>
+        <option name="environment" path="ActionManager" hit="Create private HTTP environment file for HTTP requests"/>
+        <option name="file" path="ActionManager" hit="Create private HTTP environment file for HTTP requests"/>
+        <option name="for" path="ActionManager" hit="Create private HTTP environment file for HTTP requests"/>
+        <option name="http" path="ActionManager" hit="Create private HTTP environment file for HTTP requests"/>
+        <option name="private" path="ActionManager" hit="Create private HTTP environment file for HTTP requests"/>
+        <option name="requests" path="ActionManager" hit="Create private HTTP environment file for HTTP requests"/>
+        <option name="creates" path="ActionManager" hit="Creates new HTTP Request file"/>
+        <option name="file" path="ActionManager" hit="Creates new HTTP Request file"/>
+        <option name="http" path="ActionManager" hit="Creates new HTTP Request file"/>
+        <option name="new" path="ActionManager" hit="Creates new HTTP Request file"/>
+        <option name="request" path="ActionManager" hit="Creates new HTTP Request file"/>
+        <option name="client" path="ActionManager" hit="Generate Request in HTTP Client"/>
+        <option name="generate" path="ActionManager" hit="Generate Request in HTTP Client"/>
+        <option name="http" path="ActionManager" hit="Generate Request in HTTP Client"/>
+        <option name="in" path="ActionManager" hit="Generate Request in HTTP Client"/>
+        <option name="request" path="ActionManager" hit="Generate Request in HTTP Client"/>
+        <option name="client" path="ActionManager" hit="HTTP Client"/>
+        <option name="http" path="ActionManager" hit="HTTP Client"/>
+        <option name="environment" path="ActionManager" hit="HTTP Environment File"/>
+        <option name="file" path="ActionManager" hit="HTTP Environment File"/>
+        <option name="http" path="ActionManager" hit="HTTP Environment File"/>
+        <option name="http" path="ActionManager" hit="HTTP Request"/>
+        <option name="request" path="ActionManager" hit="HTTP Request"/>
+        <option name="http" path="ActionManager" hit="Import HTTP Request"/>
+        <option name="import" path="ActionManager" hit="Import HTTP Request"/>
+        <option name="request" path="ActionManager" hit="Import HTTP Request"/>
+        <option name="collection" path="ActionManager" hit="Open HTTP Requests Collection"/>
+        <option name="http" path="ActionManager" hit="Open HTTP Requests Collection"/>
+        <option name="open" path="ActionManager" hit="Open HTTP Requests Collection"/>
+        <option name="requests" path="ActionManager" hit="Open HTTP Requests Collection"/>
+        <option name="build" path="ActionManager" hit="Opens build-in collection of HTTP Requests"/>
+        <option name="collection" path="ActionManager" hit="Opens build-in collection of HTTP Requests"/>
+        <option name="http" path="ActionManager" hit="Opens build-in collection of HTTP Requests"/>
+        <option name="in" path="ActionManager" hit="Opens build-in collection of HTTP Requests"/>
+        <option name="of" path="ActionManager" hit="Opens build-in collection of HTTP Requests"/>
+        <option name="opens" path="ActionManager" hit="Opens build-in collection of HTTP Requests"/>
+        <option name="requests" path="ActionManager" hit="Opens build-in collection of HTTP Requests"/>
+        <option name="executed" path="ActionManager" hit="Opens log file with executed HTTP Requests"/>
+        <option name="file" path="ActionManager" hit="Opens log file with executed HTTP Requests"/>
+        <option name="http" path="ActionManager" hit="Opens log file with executed HTTP Requests"/>
+        <option name="log" path="ActionManager" hit="Opens log file with executed HTTP Requests"/>
+        <option name="opens" path="ActionManager" hit="Opens log file with executed HTTP Requests"/>
+        <option name="requests" path="ActionManager" hit="Opens log file with executed HTTP Requests"/>
+        <option name="with" path="ActionManager" hit="Opens log file with executed HTTP Requests"/>
+        <option name="all" path="ActionManager" hit="Run All Requests in File"/>
+        <option name="file" path="ActionManager" hit="Run All Requests in File"/>
+        <option name="in" path="ActionManager" hit="Run All Requests in File"/>
+        <option name="requests" path="ActionManager" hit="Run All Requests in File"/>
+        <option name="run" path="ActionManager" hit="Run All Requests in File"/>
+        <option name="history" path="ActionManager" hit="Show HTTP Requests History"/>
+        <option name="http" path="ActionManager" hit="Show HTTP Requests History"/>
+        <option name="requests" path="ActionManager" hit="Show HTTP Requests History"/>
+        <option name="show" path="ActionManager" hit="Show HTTP Requests History"/>
+        <option name="client" path="ActionManager" hit="http-client.env.json"/>
+        <option name="env" path="ActionManager" hit="http-client.env.json"/>
+        <option name="http" path="ActionManager" hit="http-client.env.json"/>
+        <option name="json" path="ActionManager" hit="http-client.env.json"/>
+        <option name="client" path="ActionManager" hit="http-client.private.env.json"/>
+        <option name="env" path="ActionManager" hit="http-client.private.env.json"/>
+        <option name="http" path="ActionManager" hit="http-client.private.env.json"/>
+        <option name="json" path="ActionManager" hit="http-client.private.env.json"/>
+        <option name="private" path="ActionManager" hit="http-client.private.env.json"/>
+    </configurable>
+    <configurable id="reference.settingsdialog.IDE.editor.colors.HTTP Request" configurable_name="HTTP Request">
+        <option name="http" hit="HTTP Request"/>
+        <option name="request" hit="HTTP Request"/>
+        <option name="comment" hit="Comment"/>
+        <option name="comment" hit="Comment tag"/>
+        <option name="tag" hit="Comment tag"/>
+        <option name="environment" hit="Environment Variable"/>
+        <option name="variable" hit="Environment Variable"/>
+        <option name="field" hit="Header Field Key"/>
+        <option name="header" hit="Header Field Key"/>
+        <option name="key" hit="Header Field Key"/>
+        <option name="field" hit="Header Field Value"/>
+        <option name="header" hit="Header Field Value"/>
+        <option name="value" hit="Header Field Value"/>
+        <option name="file" hit="Input File Path"/>
+        <option name="input" hit="Input File Path"/>
+        <option name="path" hit="Input File Path"/>
+        <option name="file" hit="Input File Sign"/>
+        <option name="input" hit="Input File Sign"/>
+        <option name="sign" hit="Input File Sign"/>
+        <option name="method" hit="Method Type"/>
+        <option name="type" hit="Method Type"/>
+        <option name="boundary" hit="Multipart Boundary"/>
+        <option name="multipart" hit="Multipart Boundary"/>
+        <option name="body" hit="Request Body"/>
+        <option name="request" hit="Request Body"/>
+        <option name="name" hit="Request Name"/>
+        <option name="request" hit="Request Name"/>
+        <option name="name" hit="Request Parameter Name"/>
+        <option name="parameter" hit="Request Parameter Name"/>
+        <option name="request" hit="Request Parameter Name"/>
+        <option name="parameter" hit="Request Parameter Value"/>
+        <option name="request" hit="Request Parameter Value"/>
+        <option name="value" hit="Request Parameter Value"/>
+        <option name="port" hit="Request Port"/>
+        <option name="request" hit="Request Port"/>
+        <option name="requests" hit="Requests Separator"/>
+        <option name="separator" hit="Requests Separator"/>
+        <option name="history" hit="Response History Path"/>
+        <option name="path" hit="Response History Path"/>
+        <option name="response" hit="Response History Path"/>
+        <option name="history" hit="Response History Sign"/>
+        <option name="response" hit="Response History Sign"/>
+        <option name="sign" hit="Response History Sign"/>
+        <option name="braces" hit="Variable Braces"/>
+        <option name="variable" hit="Variable Braces"/>
+    </configurable>
 </options>

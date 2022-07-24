@@ -1,11 +1,11 @@
 <idea-plugin package="com.intellij.httpClient">
-  <id>com.jetbrains.restClient</id>
-  <version>221.5787.24</version>
-  <idea-version since-build="221.5787.24" until-build="221.5787.24"/>
-  <name>HTTP Client</name>
-  <category>Other Tools</category>
-  <description>
-    <![CDATA[
+    <id>com.jetbrains.restClient</id>
+    <version>221.5787.24</version>
+    <idea-version since-build="221.5787.24" until-build="221.5787.24"/>
+    <name>HTTP Client</name>
+    <category>Other Tools</category>
+    <description>
+        <![CDATA[
       Provides the ability to compose and execute HTTP requests from the code editor.<br/><br/>
 
       The following features are available:
@@ -17,293 +17,377 @@
       </ul>
       See the <a href="https://www.jetbrains.com/help/idea/http-client-in-product-code-editor.html">documentation</a> for details.
       ]]>
-  </description>
-  <vendor>JetBrains</vendor>
+    </description>
+    <vendor>JetBrains</vendor>
 
-  <dependencies>
-    <plugin id="com.intellij.modules.lang"/>
-    <plugin id="com.intellij.modules.xml"/>
-    <plugin id="com.intellij.modules.ultimate"/>
-    <plugin id="com.intellij.modules.microservices"/>
-    <plugin id="com.intellij.platform.images"/>
-  </dependencies>
+    <dependencies>
+        <plugin id="com.intellij.modules.lang"/>
+        <plugin id="com.intellij.modules.xml"/>
+        <plugin id="com.intellij.modules.ultimate"/>
+        <plugin id="com.intellij.modules.microservices"/>
+        <plugin id="com.intellij.platform.images"/>
+    </dependencies>
 
-  <content>
-    <module name="intellij.restClient/intelliLang"/>
-    <module name="intellij.restClient/javaScript"/>
-    <module name="intellij.restClient/microservicesUI"/>
-  </content>
+    <content>
+        <module name="intellij.restClient/intelliLang"/>
+        <module name="intellij.restClient/javaScript"/>
+        <module name="intellij.restClient/microservicesUI"/>
+    </content>
 
-  <resource-bundle>messages.RestClientBundle</resource-bundle>
-  <extensionPoints>
-    <extensionPoint qualifiedName="com.intellij.httpClient.debugger"
-                    interface="com.intellij.httpClient.http.request.debug.HttpRequestDebugger" dynamic="true"/>
-    <extensionPoint qualifiedName="com.intellij.httpClient.embeddedSyntaxHighlighterProvider"
-                    interface="com.intellij.httpClient.http.request.highlighting.EmbeddedSyntaxHighlighterProvider" dynamic="true"/>
-    <extensionPoint qualifiedName="com.intellij.httpClient.RequestExecutionSupport"
-                    interface="com.intellij.httpClient.execution.common.RequestExecutionSupport" dynamic="true"/>
-    <extensionPoint qualifiedName="com.intellij.httpClient.whatsNewContentProvider"
-                    interface="com.intellij.httpClient.http.request.notification.HttpClientWhatsNewContentProvider" dynamic="true"/>
-    <extensionPoint qualifiedName="com.intellij.httpClient.responseCustomPresentation"
-                    interface="com.intellij.httpClient.http.request.run.console.HttpResponseCustomPresentation" dynamic="true"/>
-    <extensionPoint qualifiedName="com.intellij.httpClient.customVariableDeclarationProvider"
-                    interface="com.intellij.httpClient.http.request.environment.HttpClientCustomVariableDeclarationProvider" dynamic="true"/>
-  </extensionPoints>
-  <extensions defaultExtensionNs="com.intellij">
-    <httpClient.RequestExecutionSupport implementation="com.intellij.httpClient.execution.impl.HttpRequestRunSupport"/>
-    <httpClient.RequestExecutionSupport implementation="com.intellij.httpClient.execution.impl.HttpRequestDebugSupport"/>
+    <resource-bundle>messages.RestClientBundle</resource-bundle>
+    <extensionPoints>
+        <extensionPoint qualifiedName="com.intellij.httpClient.debugger"
+                        interface="com.intellij.httpClient.http.request.debug.HttpRequestDebugger" dynamic="true"/>
+        <extensionPoint qualifiedName="com.intellij.httpClient.embeddedSyntaxHighlighterProvider"
+                        interface="com.intellij.httpClient.http.request.highlighting.EmbeddedSyntaxHighlighterProvider"
+                        dynamic="true"/>
+        <extensionPoint qualifiedName="com.intellij.httpClient.RequestExecutionSupport"
+                        interface="com.intellij.httpClient.execution.common.RequestExecutionSupport" dynamic="true"/>
+        <extensionPoint qualifiedName="com.intellij.httpClient.whatsNewContentProvider"
+                        interface="com.intellij.httpClient.http.request.notification.HttpClientWhatsNewContentProvider"
+                        dynamic="true"/>
+        <extensionPoint qualifiedName="com.intellij.httpClient.responseCustomPresentation"
+                        interface="com.intellij.httpClient.http.request.run.console.HttpResponseCustomPresentation"
+                        dynamic="true"/>
+        <extensionPoint qualifiedName="com.intellij.httpClient.customVariableDeclarationProvider"
+                        interface="com.intellij.httpClient.http.request.environment.HttpClientCustomVariableDeclarationProvider"
+                        dynamic="true"/>
+    </extensionPoints>
+    <extensions defaultExtensionNs="com.intellij">
+        <httpClient.RequestExecutionSupport
+                implementation="com.intellij.httpClient.execution.impl.HttpRequestRunSupport"/>
+        <httpClient.RequestExecutionSupport
+                implementation="com.intellij.httpClient.execution.impl.HttpRequestDebugSupport"/>
 
-    <copyPastePreProcessor implementation="com.intellij.httpClient.actions.copyPaste.CurlCopyPastePreProcessor"/>
-    <projectService serviceImplementation="com.intellij.httpClient.http.request.run.HttpRequestHistoryManager"/>
-    <projectService serviceImplementation="com.intellij.httpClient.http.request.cookies.HttpRequestCookiesStorage"/>
-    <applicationService serviceImplementation="com.intellij.httpClient.http.request.run.console.HttpSingleResponseConsoleSettings"/>
+        <copyPastePreProcessor implementation="com.intellij.httpClient.actions.copyPaste.CurlCopyPastePreProcessor"/>
+        <projectService serviceImplementation="com.intellij.httpClient.http.request.run.HttpRequestHistoryManager"/>
+        <projectService serviceImplementation="com.intellij.httpClient.http.request.cookies.HttpRequestCookiesStorage"/>
+        <applicationService
+                serviceImplementation="com.intellij.httpClient.http.request.run.console.HttpSingleResponseConsoleSettings"/>
 
-    <fileBasedIndex implementation="com.intellij.httpClient.http.request.environment.HttpRequestEnvironmentIndex"/>
-    <fileBasedIndex implementation="com.intellij.httpClient.http.request.index.HttpRequestHostIndex"/>
-    <fileBasedIndex implementation="com.intellij.httpClient.http.request.index.HttpRequestHeaderIndex$HttpRequestHeadersValuesIndex"/>
-    <fileBasedIndex implementation="com.intellij.httpClient.http.request.index.HttpRequestNameIndex"/>
+        <fileBasedIndex implementation="com.intellij.httpClient.http.request.environment.HttpRequestEnvironmentIndex"/>
+        <fileBasedIndex implementation="com.intellij.httpClient.http.request.index.HttpRequestHostIndex"/>
+        <fileBasedIndex
+                implementation="com.intellij.httpClient.http.request.index.HttpRequestHeaderIndex$HttpRequestHeadersValuesIndex"/>
+        <fileBasedIndex implementation="com.intellij.httpClient.http.request.index.HttpRequestNameIndex"/>
 
-    <fileType name="HTTP Request" implementationClass="com.intellij.httpClient.http.request.HttpRequestFileType" fieldName="INSTANCE" language="HTTP Request" extensions="http;rest"/>
-    <fileType name="Cookie storage file" implementationClass="com.intellij.httpClient.http.request.cookies.CookieStorageFileType" fieldName="INSTANCE" language="Cookie" fileNames="http-client.cookies"/>
+        <fileType name="HTTP Request" implementationClass="com.intellij.httpClient.http.request.HttpRequestFileType"
+                  fieldName="INSTANCE" language="HTTP Request" extensions="http;rest"/>
+        <fileType name="Cookie storage file"
+                  implementationClass="com.intellij.httpClient.http.request.cookies.CookieStorageFileType"
+                  fieldName="INSTANCE" language="Cookie" fileNames="http-client.cookies"/>
 
-    <editorNotificationProvider implementation="com.intellij.httpClient.http.request.notification.HttpClientNotificationPanelProvider"/>
-    <editorNotificationProvider implementation="com.intellij.httpClient.converters.legacy.LegacyRestClientNotificationPanelProvider"/>
-    <editorNotificationProvider implementation="com.intellij.httpClient.http.request.notification.HttpClientHistoryFileNotificationPanelProvider"/>
+        <editorNotificationProvider
+                implementation="com.intellij.httpClient.http.request.notification.HttpClientNotificationPanelProvider"/>
+        <editorNotificationProvider
+                implementation="com.intellij.httpClient.converters.legacy.LegacyRestClientNotificationPanelProvider"/>
+        <editorNotificationProvider
+                implementation="com.intellij.httpClient.http.request.notification.HttpClientHistoryFileNotificationPanelProvider"/>
 
-    <editorHighlighterProvider filetype="HTTP Request" implementationClass="com.intellij.httpClient.http.request.highlighting.HttpRequestHighlighterProvider"/>
-    <lang.syntaxHighlighterFactory language="Cookie"
-                                   implementationClass="com.intellij.httpClient.http.request.cookies.highlighting.CookieSyntaxHighlighterFactory"/>
+        <editorHighlighterProvider filetype="HTTP Request"
+                                   implementationClass="com.intellij.httpClient.http.request.highlighting.HttpRequestHighlighterProvider"/>
+        <lang.syntaxHighlighterFactory language="Cookie"
+                                       implementationClass="com.intellij.httpClient.http.request.cookies.highlighting.CookieSyntaxHighlighterFactory"/>
 
-    <fileIndentOptionsProvider implementation="com.intellij.httpClient.http.request.psi.codeStyle.HttpRequestIndentOptionsProvider" />
-    <lang.formatter language="HTTP Request" implementationClass="com.intellij.httpClient.http.request.psi.codeStyle.HttpRequestFormattingModelBuilder"/>
-    <langCodeStyleSettingsProvider implementation="com.intellij.httpClient.http.request.cookies.CookieCodeStyleSettingsProvider"/>
+        <fileIndentOptionsProvider
+                implementation="com.intellij.httpClient.http.request.psi.codeStyle.HttpRequestIndentOptionsProvider"/>
+        <lang.formatter language="HTTP Request"
+                        implementationClass="com.intellij.httpClient.http.request.psi.codeStyle.HttpRequestFormattingModelBuilder"/>
+        <langCodeStyleSettingsProvider
+                implementation="com.intellij.httpClient.http.request.cookies.CookieCodeStyleSettingsProvider"/>
 
-    <lang.parserDefinition language="HTTP Request" implementationClass="com.intellij.httpClient.http.request.parser.HttpRequestParserDefinition"/>
-    <lang.parserDefinition language="Cookie" implementationClass="com.intellij.httpClient.http.request.cookies.CookieStorageParserDefinition"/>
-    <annotator language="Cookie" implementationClass="com.intellij.httpClient.http.request.cookies.annotator.CookieLanguageAnnotator"/>
-    <lang.commenter language="HTTP Request" implementationClass="com.intellij.httpClient.http.request.HttpRequestCommenter"/>
-    <typedHandler implementation="com.intellij.httpClient.http.request.HttpRequestTypedHandler"/>
-    <braceMatcher filetype="HTTP Request" implementationClass="com.intellij.httpClient.http.request.HttpRequestBraceMatcher"/>
-    <lang.psiStructureViewFactory language="HTTP Request" implementationClass="com.intellij.httpClient.http.request.structure.HttpRequestStructureViewFactory"/>
-    <lang.elementManipulator forClass="com.intellij.httpClient.http.request.psi.HttpRequestTarget"
-                             implementationClass="com.intellij.httpClient.http.request.psi.manipulators.HttpRequestTargetManipulator"/>
-    <lang.elementManipulator forClass="com.intellij.httpClient.http.request.psi.HttpFilePath"
-                             implementationClass="com.intellij.httpClient.http.request.psi.manipulators.HttpRequestFilePathManipulator"/>
-    <lang.elementManipulator forClass="com.intellij.httpClient.http.request.psi.HttpMessageBody"
-                             implementationClass="com.intellij.httpClient.http.request.psi.manipulators.HttpRequestMessageManipulator"/>
-    <psi.referenceContributor language="HTTP Request" implementation="com.intellij.httpClient.http.request.psi.HttpRequestReferenceContributor"/>
-    <psi.referenceContributor language="JSON" implementation="com.intellij.httpClient.http.request.environment.reference.HttpRequestEnvironmentFileReferenceContributor"/>
-    <lang.findUsagesProvider language="HTTP Request" implementationClass="com.intellij.httpClient.http.request.findUsages.HttpRequestFindUsagesProvider"/>
-    <codeInsight.lineMarkerProvider language="HTTP Request" implementationClass="com.intellij.httpClient.http.request.codeInsight.HttpRequestDiffLineMarkerProvider"/>
+        <lang.parserDefinition language="HTTP Request"
+                               implementationClass="com.intellij.httpClient.http.request.parser.HttpRequestParserDefinition"/>
+        <lang.parserDefinition language="Cookie"
+                               implementationClass="com.intellij.httpClient.http.request.cookies.CookieStorageParserDefinition"/>
+        <annotator language="Cookie"
+                   implementationClass="com.intellij.httpClient.http.request.cookies.annotator.CookieLanguageAnnotator"/>
+        <lang.commenter language="HTTP Request"
+                        implementationClass="com.intellij.httpClient.http.request.HttpRequestCommenter"/>
+        <typedHandler implementation="com.intellij.httpClient.http.request.HttpRequestTypedHandler"/>
+        <braceMatcher filetype="HTTP Request"
+                      implementationClass="com.intellij.httpClient.http.request.HttpRequestBraceMatcher"/>
+        <lang.psiStructureViewFactory language="HTTP Request"
+                                      implementationClass="com.intellij.httpClient.http.request.structure.HttpRequestStructureViewFactory"/>
+        <lang.elementManipulator forClass="com.intellij.httpClient.http.request.psi.HttpRequestTarget"
+                                 implementationClass="com.intellij.httpClient.http.request.psi.manipulators.HttpRequestTargetManipulator"/>
+        <lang.elementManipulator forClass="com.intellij.httpClient.http.request.psi.HttpFilePath"
+                                 implementationClass="com.intellij.httpClient.http.request.psi.manipulators.HttpRequestFilePathManipulator"/>
+        <lang.elementManipulator forClass="com.intellij.httpClient.http.request.psi.HttpMessageBody"
+                                 implementationClass="com.intellij.httpClient.http.request.psi.manipulators.HttpRequestMessageManipulator"/>
+        <psi.referenceContributor language="HTTP Request"
+                                  implementation="com.intellij.httpClient.http.request.psi.HttpRequestReferenceContributor"/>
+        <psi.referenceContributor language="JSON"
+                                  implementation="com.intellij.httpClient.http.request.environment.reference.HttpRequestEnvironmentFileReferenceContributor"/>
+        <lang.findUsagesProvider language="HTTP Request"
+                                 implementationClass="com.intellij.httpClient.http.request.findUsages.HttpRequestFindUsagesProvider"/>
+        <codeInsight.lineMarkerProvider language="HTTP Request"
+                                        implementationClass="com.intellij.httpClient.http.request.codeInsight.HttpRequestDiffLineMarkerProvider"/>
 
-    <lang.documentationProvider language="HTTP Request" implementationClass="com.intellij.httpClient.http.request.documentation.comments.HttpDocTagsDocumentationProvider"/>
-    <lang.documentationProvider language="HTTP Request" implementationClass="com.intellij.httpClient.execution.header.HttpHeadersDocumentationProvider"/>
-    <lang.documentationProvider language="HTTP Request" implementationClass="com.intellij.httpClient.http.request.HttpRequestVariableDocumentationProvider"/>
+        <lang.documentationProvider language="HTTP Request"
+                                    implementationClass="com.intellij.httpClient.http.request.documentation.comments.HttpDocTagsDocumentationProvider"/>
+        <lang.documentationProvider language="HTTP Request"
+                                    implementationClass="com.intellij.httpClient.execution.header.HttpHeadersDocumentationProvider"/>
+        <lang.documentationProvider language="HTTP Request"
+                                    implementationClass="com.intellij.httpClient.http.request.HttpRequestVariableDocumentationProvider"/>
 
-    <syntaxHighlighter key="HTTP Request" implementationClass="com.intellij.httpClient.http.request.highlighting.HttpRequestSyntaxHighlighter"/>
-    <highlightingPassFactory implementation="com.intellij.httpClient.http.request.highlighting.HttpRequestNameHighlightingPassFactory"/>
-    <colorSettingsPage implementation="com.intellij.httpClient.http.request.highlighting.HttpRequestColorSettingsPage"/>
-    <additionalTextAttributes scheme="Default" file="colorSchemes/HttpRequestDefault.xml"/>
+        <syntaxHighlighter key="HTTP Request"
+                           implementationClass="com.intellij.httpClient.http.request.highlighting.HttpRequestSyntaxHighlighter"/>
+        <highlightingPassFactory
+                implementation="com.intellij.httpClient.http.request.highlighting.HttpRequestNameHighlightingPassFactory"/>
+        <colorSettingsPage
+                implementation="com.intellij.httpClient.http.request.highlighting.HttpRequestColorSettingsPage"/>
+        <additionalTextAttributes scheme="Default" file="colorSchemes/HttpRequestDefault.xml"/>
 
-    <lang.foldingBuilder language="HTTP Request" implementationClass="com.intellij.httpClient.http.request.folding.HttpRequestFoldingBuilder"/>
+        <lang.foldingBuilder language="HTTP Request"
+                             implementationClass="com.intellij.httpClient.http.request.folding.HttpRequestFoldingBuilder"/>
 
-    <configurationType implementation="com.intellij.httpClient.http.request.run.config.HttpRequestRunConfigurationType"/>
-    <runConfigurationProducer implementation="com.intellij.httpClient.http.request.run.config.HttpSingleRequestRuntimeConfigurationProducer"/>
-    <runConfigurationProducer implementation="com.intellij.httpClient.http.request.run.config.HttpFileRuntimeConfigurationProducer"/>
-    <runLineMarkerContributor language="HTTP Request" implementationClass="com.intellij.httpClient.http.request.run.HttpRequestLineMarkerProvider"/>
-    <runDashboardDefaultTypesProvider implementation="com.intellij.httpClient.http.request.run.config.HttpRequestRunDashboardDefaultTypesProvider"/>
-    <runDashboardCustomizer implementation="com.intellij.httpClient.http.request.run.config.HttpRequestRunDashboardCustomizer"/>
+        <configurationType
+                implementation="com.intellij.httpClient.http.request.run.config.HttpRequestRunConfigurationType"/>
+        <runConfigurationProducer
+                implementation="com.intellij.httpClient.http.request.run.config.HttpSingleRequestRuntimeConfigurationProducer"/>
+        <runConfigurationProducer
+                implementation="com.intellij.httpClient.http.request.run.config.HttpFileRuntimeConfigurationProducer"/>
+        <runLineMarkerContributor language="HTTP Request"
+                                  implementationClass="com.intellij.httpClient.http.request.run.HttpRequestLineMarkerProvider"/>
+        <runDashboardDefaultTypesProvider
+                implementation="com.intellij.httpClient.http.request.run.config.HttpRequestRunDashboardDefaultTypesProvider"/>
+        <runDashboardCustomizer
+                implementation="com.intellij.httpClient.http.request.run.config.HttpRequestRunDashboardCustomizer"/>
 
-    <completion.contributor language="HTTP Request" implementationClass="com.intellij.httpClient.http.request.completion.HttpRequestCompletionContributor"/>
+        <completion.contributor language="HTTP Request"
+                                implementationClass="com.intellij.httpClient.http.request.completion.HttpRequestCompletionContributor"/>
 
-    <documentationProvider implementation="com.intellij.httpClient.http.request.psi.HttpReferenceDocumentationProvider"/>
-    <refactoring.moveHandler implementation="com.intellij.httpClient.http.request.refactoring.HttpMoveRequestDelegate"/>
-    <renamePsiElementProcessor implementation="com.intellij.httpClient.http.request.refactoring.HttpRequestFakeRenameProcessor"/>
+        <documentationProvider
+                implementation="com.intellij.httpClient.http.request.psi.HttpReferenceDocumentationProvider"/>
+        <refactoring.moveHandler
+                implementation="com.intellij.httpClient.http.request.refactoring.HttpMoveRequestDelegate"/>
+        <renamePsiElementProcessor
+                implementation="com.intellij.httpClient.http.request.refactoring.HttpRequestFakeRenameProcessor"/>
 
-    <internalFileTemplate name="HTTP Request"/>
-    <internalFileTemplate name="HTTP Request Scratch"/>
-    <internalFileTemplate name="HTTP Public Environment File"/>
-    <internalFileTemplate name="HTTP Private Environment File"/>
+        <internalFileTemplate name="HTTP Request"/>
+        <internalFileTemplate name="HTTP Request Scratch"/>
+        <internalFileTemplate name="HTTP Public Environment File"/>
+        <internalFileTemplate name="HTTP Private Environment File"/>
 
-    <liveTemplateContext implementation="com.intellij.httpClient.http.request.liveTemplates.HttpRequestTemplateContextType"/>
-    <liveTemplateContext implementation="com.intellij.httpClient.http.request.environment.liveTemplates.HttpRequestEnvironmentTemplateContextType$General"/>
-    <liveTemplateContext implementation="com.intellij.httpClient.http.request.environment.liveTemplates.HttpRequestEnvironmentTemplateContextType$Environment$All"/>
-    <liveTemplateContext implementation="com.intellij.httpClient.http.request.environment.liveTemplates.HttpRequestEnvironmentTemplateContextType$Environment$Private"/>
-    <liveTemplateContext implementation="com.intellij.httpClient.http.request.environment.liveTemplates.HttpRequestEnvironmentTemplateContextType$ObjectForEnvironments"/>
-    <defaultLiveTemplates file="liveTemplates/request.xml"/>
-    <liveTemplateMacro implementation="com.intellij.httpClient.http.request.environment.liveTemplates.JsonAddCommaMacro"/>
-    <scratch.creationHelper language="HTTP Request" implementationClass="com.intellij.httpClient.http.request.actions.HttpRequestScratchFileCreationHelper" />
+        <liveTemplateContext
+                implementation="com.intellij.httpClient.http.request.liveTemplates.HttpRequestTemplateContextType"/>
+        <liveTemplateContext
+                implementation="com.intellij.httpClient.http.request.environment.liveTemplates.HttpRequestEnvironmentTemplateContextType$General"/>
+        <liveTemplateContext
+                implementation="com.intellij.httpClient.http.request.environment.liveTemplates.HttpRequestEnvironmentTemplateContextType$Environment$All"/>
+        <liveTemplateContext
+                implementation="com.intellij.httpClient.http.request.environment.liveTemplates.HttpRequestEnvironmentTemplateContextType$Environment$Private"/>
+        <liveTemplateContext
+                implementation="com.intellij.httpClient.http.request.environment.liveTemplates.HttpRequestEnvironmentTemplateContextType$ObjectForEnvironments"/>
+        <defaultLiveTemplates file="liveTemplates/request.xml"/>
+        <liveTemplateMacro
+                implementation="com.intellij.httpClient.http.request.environment.liveTemplates.JsonAddCommaMacro"/>
+        <scratch.creationHelper language="HTTP Request"
+                                implementationClass="com.intellij.httpClient.http.request.actions.HttpRequestScratchFileCreationHelper"/>
 
-    <ignoredFileProvider implementation="com.intellij.httpClient.http.request.run.HttpRequestIgnoredFileProvider"/>
+        <ignoredFileProvider implementation="com.intellij.httpClient.http.request.run.HttpRequestIgnoredFileProvider"/>
 
-    <indexedRootsProvider implementation="com.intellij.httpClient.http.request.HttpRequestCollectionProvider"/>
-    <indexedRootsProvider implementation="com.intellij.httpClient.http.request.run.HttpClientDynamicVariablesStubController"/>
+        <indexedRootsProvider implementation="com.intellij.httpClient.http.request.HttpRequestCollectionProvider"/>
+        <indexedRootsProvider
+                implementation="com.intellij.httpClient.http.request.run.HttpClientDynamicVariablesStubController"/>
 
-    <toolWindowAllowlist id="REST Client"/>
+        <toolWindowAllowlist id="REST Client"/>
 
-    <registryKey key="http.client.response.handler.force.use.rhino" defaultValue="true"
-                 description="Force use Rhino instead Nashorn to execute JS response handler in HTTP Client."/>
-    <registryKey key="http.client.show.debug.actions" defaultValue="true" description="Enable debugger for in-editor HTTP Requests."/>
+        <registryKey key="http.client.response.handler.force.use.rhino" defaultValue="true"
+                     description="Force use Rhino instead Nashorn to execute JS response handler in HTTP Client."/>
+        <registryKey key="http.client.show.debug.actions" defaultValue="true"
+                     description="Enable debugger for in-editor HTTP Requests."/>
 
-    <statistics.counterUsagesCollector groupId="http.client.conversions" version="1"/>
-    <statistics.counterUsagesCollector groupId="http.client.microservices" version="1"/>
-    <extendWordSelectionHandler implementation="com.intellij.httpClient.http.request.editor.HttpRequestDynamicVariableSelectioner"/>
-    <notificationGroup id="HTTP Client" displayType="TOOL_WINDOW" toolWindowId="Run" bundle="messages.RestClientBundle" key="notification.group.http.client"/>
-    <notificationGroup id="http.generation.notifications" displayType="STICKY_BALLOON" bundle="messages.RestClientBundle" key="notification.group.http.generation"/>
+        <statistics.counterUsagesCollector groupId="http.client.conversions" version="1"/>
+        <statistics.counterUsagesCollector groupId="http.client.microservices" version="1"/>
+        <extendWordSelectionHandler
+                implementation="com.intellij.httpClient.http.request.editor.HttpRequestDynamicVariableSelectioner"/>
+        <notificationGroup id="HTTP Client" displayType="TOOL_WINDOW" toolWindowId="Run"
+                           bundle="messages.RestClientBundle" key="notification.group.http.client"/>
+        <notificationGroup id="http.generation.notifications" displayType="STICKY_BALLOON"
+                           bundle="messages.RestClientBundle" key="notification.group.http.generation"/>
 
-    <programRunner implementation="com.intellij.httpClient.http.request.debug.HttpRequestDebugRunner"/>
-    <runAnything.executionProvider implementation="com.intellij.httpClient.http.request.run.HttpRequestRunAnythingProvider"/>
+        <programRunner implementation="com.intellij.httpClient.http.request.debug.HttpRequestDebugRunner"/>
+        <runAnything.executionProvider
+                implementation="com.intellij.httpClient.http.request.run.HttpRequestRunAnythingProvider"/>
 
-    <httpClient.whatsNewContentProvider implementation="com.intellij.httpClient.http.request.notification.HttpRequestHttpClientWhatsNewContentProvider"/>
+        <httpClient.whatsNewContentProvider
+                implementation="com.intellij.httpClient.http.request.notification.HttpRequestHttpClientWhatsNewContentProvider"/>
 
-    <intentionAction>
-      <className>com.intellij.httpClient.http.request.refactoring.HttpMoveRequestsIntention</className>
-      <!--suppress PluginXmlCapitalization -->
-      <category>HTTP Client</category>
-    </intentionAction>
-    <intentionAction>
-      <className>com.intellij.httpClient.http.request.codeInsight.HttpRequestConvertToCurlIntention</className>
-      <!--suppress PluginXmlCapitalization -->
-      <category>HTTP Client</category>
-    </intentionAction>
-    <intentionAction>
-      <className>com.intellij.httpClient.http.request.environment.codeinsight.HttpRequestEnvironmentSetSecuredValueIntention</className>
-      <!--suppress PluginXmlCapitalization -->
-      <category>HTTP Client</category>
-    </intentionAction>
-    <intentionAction>
-      <className>com.intellij.httpClient.http.request.codeInsight.HttpClientSwitchEnvironmentIntention</className>
-      <!--suppress PluginXmlCapitalization -->
-      <category>HTTP Client</category>
-    </intentionAction>
+        <intentionAction>
+            <className>com.intellij.httpClient.http.request.refactoring.HttpMoveRequestsIntention</className>
+            <!--suppress PluginXmlCapitalization -->
+            <category>HTTP Client</category>
+        </intentionAction>
+        <intentionAction>
+            <className>com.intellij.httpClient.http.request.codeInsight.HttpRequestConvertToCurlIntention</className>
+            <!--suppress PluginXmlCapitalization -->
+            <category>HTTP Client</category>
+        </intentionAction>
+        <intentionAction>
+            <className>
+                com.intellij.httpClient.http.request.environment.codeinsight.HttpRequestEnvironmentSetSecuredValueIntention
+            </className>
+            <!--suppress PluginXmlCapitalization -->
+            <category>HTTP Client</category>
+        </intentionAction>
+        <intentionAction>
+            <className>com.intellij.httpClient.http.request.codeInsight.HttpClientSwitchEnvironmentIntention</className>
+            <!--suppress PluginXmlCapitalization -->
+            <category>HTTP Client</category>
+        </intentionAction>
 
-    <!--suppress PluginXmlCapitalization -->
-    <localInspection language="HTTP Request"
-                     implementationClass="com.intellij.httpClient.http.request.codeInsight.HttpRequestPlaceholderInspection"
-                     groupKey="group.HTTPClientGroup.text"
-                     enabledByDefault="true"
-                     key="http.request.placeholder.inspection.name" bundle="messages.RestClientBundle"/>
-
-    <!--suppress PluginXmlCapitalization -->
-    <localInspection language="HTTP Request"
-                     implementationClass="com.intellij.httpClient.http.request.codeInsight.HttpRequestContentLengthIsIgnoredInspection"
-                     groupKey="group.HTTPClientGroup.text"
-                     enabledByDefault="true"
-                     key="http.request.content.length.is.redundant.inspection.name" bundle="messages.RestClientBundle"/>
-
-    <!--suppress PluginXmlCapitalization -->
-    <localInspection language="HTTP Request"
-                     implementationClass="com.intellij.httpClient.http.request.codeInsight.HttpRequestIncorrectHttpHeaderInspection"
-                     enabledByDefault="true"
-                     shortName="IncorrectHttpHeaderInspection"
-                     groupKey="group.HTTPClientGroup.text"
-                     bundle="messages.RestClientBundle"
-                     key="http.request.incorrect.http.header.inspection.name"/>
-
-    <localInspection
-      shortName="HttpUrlsUsage"
-      implementationClass="com.intellij.httpClient.http.security.HttpUrlsUsageInspection"
-      key="inspection.name"
-      groupKey="inspection.group"
-      enabledByDefault="true"
-      level="WEAK WARNING"/>
-
-    <!--suppress PluginXmlCapitalization -->
-    <localInspection language="HTTP Request"
-                     implementationClass="com.intellij.httpClient.http.request.codeInsight.HttpClientUnresolvedVariableInspection"
-                     enabledByDefault="true"
-                     groupKey="group.HTTPClientGroup.text"
-                     key="http.client.unresolved.variable.inspection.name"
-                     bundle="messages.RestClientBundle"/>
-    
-    <psi.referenceContributor language="HTTP Request"
-                              implementation="com.intellij.httpClient.http.request.microservices.HttpRequestSegmentsReferenceContributor"/>
-    <targetElementEvaluator language="HTTP Request"
-                            implementationClass="com.intellij.httpClient.http.request.microservices.HttpRequestTargetElementEvaluator"/>
-    <microservices.urlResolverFactory implementation="com.intellij.httpClient.http.request.microservices.RestClientUrlResolver$Factory"/>
-    <microservices.endpointsSidePanelProvider
-      implementation="com.intellij.httpClient.http.request.microservices.endpoints.HttpClientTab$Provider"/>
-    <enterHandlerDelegate implementation="com.intellij.httpClient.http.request.microservices.endpoints.HttpClientTabEnterHandlerDelegate"/>
-    <codeInsight.lineMarkerProvider language="HTTP Request"
-                                    implementationClass="com.intellij.httpClient.http.request.microservices.endpoints.EmbeddedHttpClientEditorRunLineMarkerProvider"/>
-
-    <projectService serviceInterface="com.intellij.httpClient.http.request.environment.secrets.HttpRequestEnvironmentSecretsManager"
-                    serviceImplementation="com.intellij.httpClient.http.request.environment.secrets.HttpRequestEnvironmentPasswordSafeSecretsManager"/>
-
-    <codeInsight.lineMarkerProvider language="JSON"
-                                    implementationClass="com.intellij.httpClient.http.request.environment.codeinsight.HttpRequestEnvironmentSetSecretLineMarkerProvider"/>
-
-    <microservices.requestNavigator implementation="com.intellij.httpClient.http.request.microservices.RestClientRequestRunnerNavigator"/>
-    <microservices.requestNavigator implementation="com.intellij.httpClient.http.request.microservices.RestClientRequestEditorNavigator"/>
-    <gotoSymbolContributor implementation="com.intellij.httpClient.http.request.searcheverywhere.HttpRequestChooseByNameContributor"/>
-    <applicationService serviceImplementation="com.intellij.httpClient.execution.HttpClientUserMimeTypeRegistry"/>
-    <httpClient.responseCustomPresentation
-      implementation="com.intellij.httpClient.http.request.run.console.presentations.HttpResponseRedirectsPresentation"/>
-    <registryKey defaultValue="true" description="Enables new UI for HTTP Client" key="http.client.toolbar.v2"/>
-    <highlightingPassFactory implementation="com.intellij.httpClient.http.request.run.v2.HttpRequestRunLineMarkerV2Provider"/>
-    <intentionMenuContributor implementation="com.intellij.httpClient.http.request.run.v2.HttpRequestIntentionMenuContributor"
-                              order="first"/>
-  </extensions>
-  <extensions defaultExtensionNs="com.intellij">
-    <projectService serviceImplementation="com.intellij.httpClient.http.request.run.console.HttpRequestErrorFileFilter"/>
-  </extensions>
-
-  <extensions defaultExtensionNs="JavaScript.JsonSchema">
-    <ProviderFactory implementation="com.intellij.httpClient.http.request.environment.HttpRequestEnvironmentJsonSchemaProviderFactory"/>
-  </extensions>
-
-  <applicationListeners>
-    <listener class="com.intellij.httpClient.http.request.run.HttpRequestGlobalContext$HttpRequestGlobalContextProjectListener" topic="com.intellij.openapi.project.ProjectManagerListener"/>
-  </applicationListeners>
-  <actions>
-    <group id="HTTPClientGroup" popup="true">
-      <action class="com.intellij.httpClient.actions.NewHttpRequestInToolMenuAction" id="HTTPClient.NewRequestInToolMenuAction"/>
-      <action class="com.intellij.httpClient.actions.HttpRequestOpenCollectionAction" id="HTTPClient.OpenCollection"/>
-      <action class="com.intellij.httpClient.actions.HttpRequestShowHistoryAction" id="RESTClient.ShowHistory"/>
-      <add-to-group group-id="ToolsMenu" anchor="last"/>
-    </group>
-    <action class="com.intellij.httpClient.converters.legacy.LegacyRestClientFileToNewAction" id="RESTClient.ConvertToNew">
-      <add-to-group group-id="ProjectViewPopupMenuRefactoringGroup" anchor="after" relative-to-action="ValidateXml"/>
-    </action>
-    <action id="HTTP.Request.NewFile" class="com.intellij.httpClient.http.request.actions.NewHttpRequestFileAction">
-      <add-to-group group-id="NewGroup" anchor="last"/>
-    </action>
-    <group id="HTTPClientNewEnvironmentFile" class="com.intellij.httpClient.actions.environment.HttpRequestNewEnvironmentFileGroup">
-      <action id="NewPublicEnvironmentFile" class="com.intellij.httpClient.actions.environment.HttpRequestNewPublicEnvironmentFileAction">
         <!--suppress PluginXmlCapitalization -->
-        <override-text place="popup@HttpClient.NotificationPanel"/>
-      </action>
-      <action id="NewPrivateEnvironmentFile" class="com.intellij.httpClient.actions.environment.HttpRequestNewPrivateEnvironmentFileAction">
-        <!--suppress PluginXmlCapitalization -->
-        <override-text place="popup@HttpClient.NotificationPanel"/>
-      </action>
-    </group>
-    <group id="HTTPClient.Convert" class="com.intellij.httpClient.actions.HttpRequestConvertGroup" popup="true">
-      <!--suppress PluginXmlCapitalization -->
-      <action id="com.intellij.httpClient.actions.ConvertCurlToHttpRequestAction" class="com.intellij.httpClient.actions.ConvertCurlToHttpRequestAction">
-        <add-to-group group-id="HTTPClientGroup" anchor="last"/>
-        <!--suppress PluginXmlCapitalization -->
-        <override-text place="popup@HttpClientConvertPopupV2"/>
-      </action>
-      <action class="com.intellij.httpClient.converters.legacy.LegacyRestClientRequestFromExternalFilesAction" id="RESTClient.RequestFromLegacyFiles">
-        <override-text place="popup@HttpClientConvertPopupV2"/>
-      </action>
-    </group>
-    <action class="com.intellij.httpClient.actions.AddHttpRequestAction" id="HTTPClient.AddRequest"/>
-    <action class="com.intellij.httpClient.actions.HttpRequestRunFileAction" id="HTTPClient.RunAll">
-    </action>
+        <localInspection language="HTTP Request"
+                         implementationClass="com.intellij.httpClient.http.request.codeInsight.HttpRequestPlaceholderInspection"
+                         groupKey="group.HTTPClientGroup.text"
+                         enabledByDefault="true"
+                         key="http.request.placeholder.inspection.name" bundle="messages.RestClientBundle"/>
 
-    <!--suppress PluginXmlCapitalization -->
-    <action class="com.intellij.httpClient.actions.copyPaste.HttpRequestCopyAsCurlAction" id="HTTPClientConvertToCurlAndCopy">
-      <add-to-group group-id="CutCopyPasteGroup" anchor="last"/>
-      <add-to-group group-id="Copy.Paste.Special" anchor="last"/>
-      <add-to-group group-id="HTTPClient.Convert"/>
-      <!--suppress PluginXmlCapitalization -->
-      <override-text place="popup@HttpClientConvertPopup"/>
-    </action>
-    <action id="HTTPClient.CopyResponseBody"
-            class="com.intellij.httpClient.http.request.run.console.HttpSingleResponseConsole$HttpRequestCopyResponseBodyAction">
-      <add-to-group group-id="ConsoleView.PopupMenu"/>
-    </action>
-  </actions>
+        <!--suppress PluginXmlCapitalization -->
+        <localInspection language="HTTP Request"
+                         implementationClass="com.intellij.httpClient.http.request.codeInsight.HttpRequestContentLengthIsIgnoredInspection"
+                         groupKey="group.HTTPClientGroup.text"
+                         enabledByDefault="true"
+                         key="http.request.content.length.is.redundant.inspection.name"
+                         bundle="messages.RestClientBundle"/>
+
+        <!--suppress PluginXmlCapitalization -->
+        <localInspection language="HTTP Request"
+                         implementationClass="com.intellij.httpClient.http.request.codeInsight.HttpRequestIncorrectHttpHeaderInspection"
+                         enabledByDefault="true"
+                         shortName="IncorrectHttpHeaderInspection"
+                         groupKey="group.HTTPClientGroup.text"
+                         bundle="messages.RestClientBundle"
+                         key="http.request.incorrect.http.header.inspection.name"/>
+
+        <localInspection
+                shortName="HttpUrlsUsage"
+                implementationClass="com.intellij.httpClient.http.security.HttpUrlsUsageInspection"
+                key="inspection.name"
+                groupKey="inspection.group"
+                enabledByDefault="true"
+                level="WEAK WARNING"/>
+
+        <!--suppress PluginXmlCapitalization -->
+        <localInspection language="HTTP Request"
+                         implementationClass="com.intellij.httpClient.http.request.codeInsight.HttpClientUnresolvedVariableInspection"
+                         enabledByDefault="true"
+                         groupKey="group.HTTPClientGroup.text"
+                         key="http.client.unresolved.variable.inspection.name"
+                         bundle="messages.RestClientBundle"/>
+
+        <psi.referenceContributor language="HTTP Request"
+                                  implementation="com.intellij.httpClient.http.request.microservices.HttpRequestSegmentsReferenceContributor"/>
+        <targetElementEvaluator language="HTTP Request"
+                                implementationClass="com.intellij.httpClient.http.request.microservices.HttpRequestTargetElementEvaluator"/>
+        <microservices.urlResolverFactory
+                implementation="com.intellij.httpClient.http.request.microservices.RestClientUrlResolver$Factory"/>
+        <microservices.endpointsSidePanelProvider
+                implementation="com.intellij.httpClient.http.request.microservices.endpoints.HttpClientTab$Provider"/>
+        <enterHandlerDelegate
+                implementation="com.intellij.httpClient.http.request.microservices.endpoints.HttpClientTabEnterHandlerDelegate"/>
+        <codeInsight.lineMarkerProvider language="HTTP Request"
+                                        implementationClass="com.intellij.httpClient.http.request.microservices.endpoints.EmbeddedHttpClientEditorRunLineMarkerProvider"/>
+
+        <projectService
+                serviceInterface="com.intellij.httpClient.http.request.environment.secrets.HttpRequestEnvironmentSecretsManager"
+                serviceImplementation="com.intellij.httpClient.http.request.environment.secrets.HttpRequestEnvironmentPasswordSafeSecretsManager"/>
+
+        <codeInsight.lineMarkerProvider language="JSON"
+                                        implementationClass="com.intellij.httpClient.http.request.environment.codeinsight.HttpRequestEnvironmentSetSecretLineMarkerProvider"/>
+
+        <microservices.requestNavigator
+                implementation="com.intellij.httpClient.http.request.microservices.RestClientRequestRunnerNavigator"/>
+        <microservices.requestNavigator
+                implementation="com.intellij.httpClient.http.request.microservices.RestClientRequestEditorNavigator"/>
+        <gotoSymbolContributor
+                implementation="com.intellij.httpClient.http.request.searcheverywhere.HttpRequestChooseByNameContributor"/>
+        <applicationService serviceImplementation="com.intellij.httpClient.execution.HttpClientUserMimeTypeRegistry"/>
+        <httpClient.responseCustomPresentation
+                implementation="com.intellij.httpClient.http.request.run.console.presentations.HttpResponseRedirectsPresentation"/>
+        <registryKey defaultValue="true" description="Enables new UI for HTTP Client" key="http.client.toolbar.v2"/>
+        <highlightingPassFactory
+                implementation="com.intellij.httpClient.http.request.run.v2.HttpRequestRunLineMarkerV2Provider"/>
+        <intentionMenuContributor
+                implementation="com.intellij.httpClient.http.request.run.v2.HttpRequestIntentionMenuContributor"
+                order="first"/>
+    </extensions>
+    <extensions defaultExtensionNs="com.intellij">
+        <projectService
+                serviceImplementation="com.intellij.httpClient.http.request.run.console.HttpRequestErrorFileFilter"/>
+    </extensions>
+
+    <extensions defaultExtensionNs="JavaScript.JsonSchema">
+        <ProviderFactory
+                implementation="com.intellij.httpClient.http.request.environment.HttpRequestEnvironmentJsonSchemaProviderFactory"/>
+    </extensions>
+
+    <applicationListeners>
+        <listener
+                class="com.intellij.httpClient.http.request.run.HttpRequestGlobalContext$HttpRequestGlobalContextProjectListener"
+                topic="com.intellij.openapi.project.ProjectManagerListener"/>
+    </applicationListeners>
+    <actions>
+        <group id="HTTPClientGroup" popup="true">
+            <action class="com.intellij.httpClient.actions.NewHttpRequestInToolMenuAction"
+                    id="HTTPClient.NewRequestInToolMenuAction"/>
+            <action class="com.intellij.httpClient.actions.HttpRequestOpenCollectionAction"
+                    id="HTTPClient.OpenCollection"/>
+            <action class="com.intellij.httpClient.actions.HttpRequestShowHistoryAction" id="RESTClient.ShowHistory"/>
+            <add-to-group group-id="ToolsMenu" anchor="last"/>
+        </group>
+        <action class="com.intellij.httpClient.converters.legacy.LegacyRestClientFileToNewAction"
+                id="RESTClient.ConvertToNew">
+            <add-to-group group-id="ProjectViewPopupMenuRefactoringGroup" anchor="after"
+                          relative-to-action="ValidateXml"/>
+        </action>
+        <action id="HTTP.Request.NewFile" class="com.intellij.httpClient.http.request.actions.NewHttpRequestFileAction">
+            <add-to-group group-id="NewGroup" anchor="last"/>
+        </action>
+        <group id="HTTPClientNewEnvironmentFile"
+               class="com.intellij.httpClient.actions.environment.HttpRequestNewEnvironmentFileGroup">
+            <action id="NewPublicEnvironmentFile"
+                    class="com.intellij.httpClient.actions.environment.HttpRequestNewPublicEnvironmentFileAction">
+                <!--suppress PluginXmlCapitalization -->
+                <override-text place="popup@HttpClient.NotificationPanel"/>
+            </action>
+            <action id="NewPrivateEnvironmentFile"
+                    class="com.intellij.httpClient.actions.environment.HttpRequestNewPrivateEnvironmentFileAction">
+                <!--suppress PluginXmlCapitalization -->
+                <override-text place="popup@HttpClient.NotificationPanel"/>
+            </action>
+        </group>
+        <group id="HTTPClient.Convert" class="com.intellij.httpClient.actions.HttpRequestConvertGroup" popup="true">
+            <!--suppress PluginXmlCapitalization -->
+            <action id="com.intellij.httpClient.actions.ConvertCurlToHttpRequestAction"
+                    class="com.intellij.httpClient.actions.ConvertCurlToHttpRequestAction">
+                <add-to-group group-id="HTTPClientGroup" anchor="last"/>
+                <!--suppress PluginXmlCapitalization -->
+                <override-text place="popup@HttpClientConvertPopupV2"/>
+            </action>
+            <action class="com.intellij.httpClient.converters.legacy.LegacyRestClientRequestFromExternalFilesAction"
+                    id="RESTClient.RequestFromLegacyFiles">
+                <override-text place="popup@HttpClientConvertPopupV2"/>
+            </action>
+        </group>
+        <action class="com.intellij.httpClient.actions.AddHttpRequestAction" id="HTTPClient.AddRequest"/>
+        <action class="com.intellij.httpClient.actions.HttpRequestRunFileAction" id="HTTPClient.RunAll">
+        </action>
+
+        <!--suppress PluginXmlCapitalization -->
+        <action class="com.intellij.httpClient.actions.copyPaste.HttpRequestCopyAsCurlAction"
+                id="HTTPClientConvertToCurlAndCopy">
+            <add-to-group group-id="CutCopyPasteGroup" anchor="last"/>
+            <add-to-group group-id="Copy.Paste.Special" anchor="last"/>
+            <add-to-group group-id="HTTPClient.Convert"/>
+            <!--suppress PluginXmlCapitalization -->
+            <override-text place="popup@HttpClientConvertPopup"/>
+        </action>
+        <action id="HTTPClient.CopyResponseBody"
+                class="com.intellij.httpClient.http.request.run.console.HttpSingleResponseConsole$HttpRequestCopyResponseBodyAction">
+            <add-to-group group-id="ConsoleView.PopupMenu"/>
+        </action>
+    </actions>
 </idea-plugin>

@@ -1,23 +1,24 @@
 <idea-plugin package="com.intellij.httpClient.microservices">
 
-  <dependencies>
-    <plugin id="com.intellij.microservices.ui"/>
-  </dependencies>
+    <dependencies>
+        <plugin id="com.intellij.microservices.ui"/>
+    </dependencies>
 
-  <extensions defaultExtensionNs="com.intellij">
-    <intentionAction>
-      <className>com.intellij.httpClient.microservices.actions.OpenInHttpClientIntention</className>
-      <!--suppress PluginXmlCapitalization -->
-      <category>HTTP Client</category>
-    </intentionAction>
+    <extensions defaultExtensionNs="com.intellij">
+        <intentionAction>
+            <className>com.intellij.httpClient.microservices.actions.OpenInHttpClientIntention</className>
+            <!--suppress PluginXmlCapitalization -->
+            <category>HTTP Client</category>
+        </intentionAction>
 
-    <microservices.urlInlayAction implementation="com.intellij.httpClient.microservices.actions.OpenInHttpUrlInlayAction"/>
-  </extensions>
+        <microservices.urlInlayAction
+                implementation="com.intellij.httpClient.microservices.actions.OpenInHttpUrlInlayAction"/>
+    </extensions>
 
-  <actions>
-    <action id="com.intellij.httpClient.microservices.actions.HttpGenerateRequestFromEndpointsAction"
-            class="com.intellij.httpClient.microservices.actions.HttpGenerateRequestFromEndpointsAction">
-      <add-to-group group-id="EndpointsActions.ContextMenu" anchor="first"/>
-    </action>
-  </actions>
+    <actions>
+        <action id="com.intellij.httpClient.microservices.actions.HttpGenerateRequestFromEndpointsAction"
+                class="com.intellij.httpClient.microservices.actions.HttpGenerateRequestFromEndpointsAction">
+            <add-to-group group-id="EndpointsActions.ContextMenu" anchor="first"/>
+        </action>
+    </actions>
 </idea-plugin>

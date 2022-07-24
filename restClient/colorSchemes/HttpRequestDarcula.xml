@@ -1,15 +1,15 @@
 <?xml version='1.0'?>
 <list>
-  <option name="HTTP_REQUEST_PARAMETER_NAME">
-    <value>
-      <option name="FONT_TYPE" value="0" />
-      <option name="FOREGROUND" value="FFC66D" />
-    </value>
-  </option>
-  <option name="HTTP_REQUEST_PARAMETER_VALUE">
-    <value>
-      <option name="FONT_TYPE" value="0" />
-      <option name="FOREGROUND" value="A9B7C6" />
-    </value>
-  </option>
+    <option name="HTTP_REQUEST_PARAMETER_NAME">
+        <value>
+            <option name="FONT_TYPE" value="0"/>
+            <option name="FOREGROUND" value="FFC66D"/>
+        </value>
+    </option>
+    <option name="HTTP_REQUEST_PARAMETER_VALUE">
+        <value>
+            <option name="FONT_TYPE" value="0"/>
+            <option name="FOREGROUND" value="A9B7C6"/>
+        </value>
+    </option>
 </list>

@@ -1,17 +1,19 @@
 <idea-plugin package="com.intellij.httpClient.js">
 
-  <dependencies>
-    <plugin id="JavaScript"/>
-  </dependencies>
+    <dependencies>
+        <plugin id="JavaScript"/>
+    </dependencies>
 
-  <extensions defaultExtensionNs="JavaScript">
-    <predefinedLibraryProvider implementation="com.intellij.httpClient.js.http.request.run.HttpResponseHandlerJSProvider"/>
-    <elementScopeProvider implementation="com.intellij.httpClient.js.http.request.run.HttpResponseJSResolveScopeProvider"/>
-  </extensions>
-  <extensions defaultExtensionNs="com.intellij.httpClient">
-    <embeddedSyntaxHighlighterProvider
-      implementation="com.intellij.httpClient.js.http.request.highlighting.JsEmbeddedSyntaxHighlighterProvider"/>
-    <customVariableDeclarationProvider
-      implementation="com.intellij.httpClient.js.http.request.environment.JsRequestHandlerScriptVariablesProvider"/>
-  </extensions>
+    <extensions defaultExtensionNs="JavaScript">
+        <predefinedLibraryProvider
+                implementation="com.intellij.httpClient.js.http.request.run.HttpResponseHandlerJSProvider"/>
+        <elementScopeProvider
+                implementation="com.intellij.httpClient.js.http.request.run.HttpResponseJSResolveScopeProvider"/>
+    </extensions>
+    <extensions defaultExtensionNs="com.intellij.httpClient">
+        <embeddedSyntaxHighlighterProvider
+                implementation="com.intellij.httpClient.js.http.request.highlighting.JsEmbeddedSyntaxHighlighterProvider"/>
+        <customVariableDeclarationProvider
+                implementation="com.intellij.httpClient.js.http.request.environment.JsRequestHandlerScriptVariablesProvider"/>
+    </extensions>
 </idea-plugin>
